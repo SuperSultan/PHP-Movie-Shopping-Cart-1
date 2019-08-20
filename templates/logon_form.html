@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movie Shopping Cart</title>
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	<h1>myMovies Xpress!</h1>	
+<body>
+<?php 
+	$msg = displayLoginForm($msg);
+	if ( $msg != "" ) { echo "<p style='color:red'>displayLoginForm($msg)</p>";
+	echo $msg;}
+?>
+<form action="./logon.php" method="post">
+
+	Username: <input type="text" name="username" required>
+	<?php $_POST['username'] = $username; ?>
+	<br>	
+	Password: <input type="password" name="password" required>
+	<br>
+	<?php $_POST['password'] = $password; ?>
+	<input type="reset" value="Clear">
+	<input type="submit" name="submit" value="Login">
+</form>
+
+<br>
+<a href="../index.html">ePortfolio</a>
+
+
+</body>
+</html>
